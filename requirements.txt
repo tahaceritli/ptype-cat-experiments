@@ -1,0 +1,9 @@
+clevercsv
+joblib
+matplotlib
+mpltools
+nltk
+numpy
+pandas
+ptype
+scikit-learn

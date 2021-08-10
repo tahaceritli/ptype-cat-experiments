@@ -1,0 +1,11 @@
+1) unzip files.zip into the inpus folder
+2) setup a virtual environment using virtualenv and requirements.txt:
+	- virtualenv venv
+	- source venv/bin/activate
+	- pip install -r requirements.py
+3) resolve the mpltools set_axis_bgcolor issue by replacing it with set_facecolor (see https://github.com/tonysyu/mpltools/issues/33 for the details)
+4) run preprocessing.py using python -m src.preprocessing
+5) run train_model.py using python -m src.train_model
+6) run infer_types.py using python -m src.infer_types
+7) run infer_categories_bot.py using python -m src.infer_categories_bot
+8) run infer_categories.py using python -m src.infer_categories
