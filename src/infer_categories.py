@@ -227,7 +227,7 @@ def main():
     outputs_cv = run(all_predictions, annotations_dict, y_cv, z_cv)
     print("run is done and will evaluate the methods")
 
-    json.dump(outputs_cv, open("outputs/cat_val_outputs_cv_with_bot.json", "w"))
+    json.dump(outputs_cv, open("outputs/results_cat.json", "w"))
     # for method in all_predictions:
     #     print(method, all_predictions[method][("Midwest_Survey_nominal", "Education")])
     report_results(outputs_cv)

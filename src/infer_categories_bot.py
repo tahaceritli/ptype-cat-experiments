@@ -22,14 +22,9 @@ def filter_categorical_columns(dataset, df, y, z):
 hyperparams = [5, 10, 20, 40, 80]
 bot_predictions = {dataset:{} for dataset in datasets}
 
-# skipped jannis for now
-# why did we skip these datasets?
-datasets_left = ["ldpa", "Click_prediction_small", "colleges_aaup",
-                 "chscase_geyser1", "river-ice", "fri_c2_1000_50", "covertype",
-                 "kr-vs-kp", "pasture", "ParkinsonSpeechDatasetwithMultipleTypesofSoundRecordings"]
-for dataset in datasets_left:
+for dataset in ["ldpa"]:
     print("reading ", dataset)
-    df = bot_read_data(data_folder, dataset + ".csv")
+    df = bot_read_data(data_folder + "files/", dataset + ".csv")
     df = filter_categorical_columns(dataset, df, y, z)
     bot_predictions[dataset] = bot_infer_categorical_values(df, hyperparams)
 
