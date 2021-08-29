@@ -37,7 +37,7 @@ def evaluate_encoding(annotations, predictions):
 
 def ptype_load_data(dataset):
     if dataset in ["Midwest_Survey_nominal", "usp05"]:
-        filename = dataset + "_.csv"
+        filename = "inputs/files/" + dataset + "_.csv"
     else:
         filename = "inputs/files/" + dataset + ".csv"
     print("expected path =", filename)

@@ -22,9 +22,10 @@ def filter_categorical_columns(dataset, df, y, z):
 hyperparams = [5, 10, 20, 40, 80]
 bot_predictions = {dataset:{} for dataset in datasets}
 
-for dataset in ["ldpa"]:
+for dataset in datasets:
     print("reading ", dataset)
     df = bot_read_data(data_folder + "files/", dataset + ".csv")
+
     df = filter_categorical_columns(dataset, df, y, z)
     bot_predictions[dataset] = bot_infer_categorical_values(df, hyperparams)
 
